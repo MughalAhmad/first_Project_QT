@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body>
+    <div style="width:100vw; height: 100vh;  display: flex; flex-direction: column; justify-content:  center; align-items: center;">
+        <h1 style="text-decoration:underline;">Quick Tijarat</h1>
+        <form style="width: 30vw; height: 45vh; border:1px solid black; display: flex; flex-direction: column; justify-content: space-evenly; border-radius: 7px;"
+        action="/reaction" method="POST"
+        >
+
+            <div style="display: flex; justify-content: space-between; margin-left: 10px;">
+                <label style="font-size: 30px;">ID</label>
+                <input style="width: 50%; height: 30px; margin-right: 10px; font-size: 20px; border-radius: 7px;" name="id" value="" type="text"/>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-left: 10px;">
+                <label style="font-size: 30px;">Type</label>
+                <input style="width: 50%; height: 30px; margin-right: 10px; font-size: 20px; border-radius: 7px;" name="type" value="" type="text"/>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-left: 10px;">
+                <label style="font-size: 30px;">Product</label>
+                <!-- <input style="width: 50%; height: 30px; margin-right: 10px;  font-size: 20px; border-radius: 7px;" name="productPurchase" value="" type="number" /> -->
+                <select style="width: 50%; height: 30px; margin-right: 10px; font-size: 20px; border-radius: 7px;" name="productId">
+                    <option value="" disabled selected>SELECT</option>
+                    <% data.map((item)=>{ %>
+                        <option value="<%= item.productId%>"><%=item.productName %></option>
+                   <% }) %>
+                </select>
+            </div>
+
+
+            <div style="display: flex; flex-direction: row-reverse;">
+            <button type="submit" style="width: 80px; height: 40px; border-radius: 7px; margin-right: 10px;">
+                Submit
+            </button>
+
+            <a href="/" style="width: 80px; height: 40px; border-radius: 7px;  margin-right: 30px;">Cancel</a>
+        </div>
+        </form>
+    </div>
+
+
+
+   
+        
+  
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "db":{
+        "host":"localhost",
+        "port":5432,
+        "username":"postgres",
+        "password":"ahmad123",
+        "database":"Product",
+        "dialect":"postgres",
+        "logging":false
+    },
+    "jwt":{
+        "secret":"/ykTMC7X+y8l2JTrFPBWss5oP32yW+1yjzN7GsdHmrY="
+    }
+}
